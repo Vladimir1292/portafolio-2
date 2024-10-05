@@ -1,0 +1,125 @@
+.blur{
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 50;
+  padding-top: 1rem;
+}
+.header__caja{
+  width: 80%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: rgba(30, 30, 30);
+  height: 8dvh;
+
+}
+.logo {
+  font-size: 2.8rem;
+  font-family: var(--titles);
+  font-weight: 700;
+  background: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu {
+  width: 100%;
+  max-width: 400px;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-around;
+}
+.menu__item {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.menu__item a {
+  color: var(--secundary-color);
+  font-family: var(--titles);
+}
+
+.menu__item a:hover {
+  background: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu__item:hover {
+  transform: scale(1.1);
+}
+.hamburger{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__caja {
+    height: 11dvh;
+    min-width: 30rem;
+    align-content: center
+  }
+  .menu{
+    width: auto;
+  }
+  .menu__item a {
+    font-size: 2.5rem;
+}
+  .hamburger{
+    display:block;
+  }
+  .panel{
+    flex-direction: column;
+    align-items: center;
+    height: 100dvh;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(100%, 0);
+    transition: .4s ease-in-out;
+    background: rgba(30, 30, 30);
+  }
+/* Opciones de desplazamiento del panel */
+
+    /* sale de arriba:
+    transform: translate(0, -100%);
+     */
+    /* Sale de abajo:
+    transform: translate(0, 100%);
+    */
+    /*Sale de la derecha
+    transform: translate(100%, 0);
+     */
+    /* Sale de la izquierda
+    transform: translate(-100%, 0);
+
+    */
+
+
+  .panel.is-active{
+    transform: translate(0,0);
+    backdrop-filter: blur(13px);
+  }
+
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background-color: #008bba;
+}
+
+  .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+    background-color: #008bba;
+}
+
+}

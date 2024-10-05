@@ -1,0 +1,88 @@
+@import url("../styles/animation.css");
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--text-content);
+  min-height: 100dvh;
+}
+.contact__title {
+  font-size: var(--subtitles);
+  margin-bottom: 25px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  align-self: center;
+  align-items: stretch;
+  max-width: 430px;
+  background: var(--main-color);
+  padding: 2rem 2rem;
+  height: auto;
+  justify-content: center;
+  border-radius: 15px;
+  gap: 4px;
+  min-height: 54dvh;
+}
+.form > * {
+  margin-bottom: 1rem;
+}
+.form > *:last-child,
+.form__btn {
+  margin-bottom: 0;
+}
+.form__label {
+  font-size: 1.8rem;
+  color: rgba(37, 37, 37, 0.6);
+}
+.form__input {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+.form__textarea {
+  font-size: 1.8rem;
+  resize: none;
+  height: 100px;
+}
+.form__btn {
+  width: 100%;
+  max-width: 200px;
+  align-self: center;
+  background: rgb(30, 30, 30);
+  color: white;
+  padding: 2rem;
+  border-radius: 11px;
+  border: 1px solid white;
+}
+
+.form__btn:hover {
+  background-color: rgb(239, 239, 239);
+  border: 2px solid black;
+  color: black;
+  -webkit-animation: jello-horizontal 1s both;
+  animation: jello-horizontal 1s both;
+}
+
+.error-message {
+  color: tomato;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+.success-message {
+  margin-top: 1rem;
+  text-align: center;
+  color: limegreen;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.succes-border {
+  border: 2px solid limegreen;
+}
+.error-border {
+  border: 2px solid tomato;
+}
