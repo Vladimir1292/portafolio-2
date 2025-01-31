@@ -24,6 +24,10 @@ const skillCard = [
         title: "Java",
     },
     {
+        icon: "devicon:react",
+        title: "React",
+    },
+    {
         icon: "logos:trello",
         title: "Trello",
     },
